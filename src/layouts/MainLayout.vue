@@ -29,8 +29,11 @@ import { openURL } from 'quasar';
 export default {
   computed: {
     title() {
-      let currentPath = this.$route.fullPath
-      return 'kkkk'
+      let currentPath = this.$route.fullPath;
+      // return currentPath == '/' ? 'Chat App' : 'a7a';
+      if (currentPath == '/') return 'Chat App';
+      else if (currentPath == '/chat') return 'Chat Box';
+      else return '404';
     },
   },
   methods: {
